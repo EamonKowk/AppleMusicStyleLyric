@@ -179,6 +179,9 @@ def save_img(name, artist, lrc, img_url, aid, save_dir='output/'):
         bbox = draw.textbbox((0, 0), line, font=lyric_font)
         total_height += bbox[3] - bbox[1] + line_space
 
+    if wrapped_lrc:
+        total_height -= line_space  # 去掉最后一个行间距
+
     if img_url.startswith('http'):
         raw_img = requests.get(img_url)
         album_img = Image.open(BytesIO(raw_img.content))
@@ -188,7 +191,7 @@ def save_img(name, artist, lrc, img_url, aid, save_dir='output/'):
     iw, ih = album_img.size
     album_h = ih * share_img_width // iw
 
-    h = album_h + padding + total_height + banner_space + banner_size + padding + 150
+    h = album_h + padding + total_height + banner_space + banner_size + padding + 180
 
     resized_album = album_img.resize((share_img_width, album_h), resample=3)
     icon_img = Image.open(icon)
