@@ -12,3 +12,7 @@ Apple中英文字体并不相同，因此做了自动字体选择，同时添加
 歌词、封面来源于网易云（因为好爬，笑），还需要Apple Music ID来制作二维码.
 
 ## 效果图
+#### Life will change
+![](https://raw.githubusercontent.com/EamonKowk/AppleMusicStyleLyric/master/output/Life%20Will%20Change.png)
+#### Shivers
+![](https://raw.githubusercontent.com/EamonKowk/AppleMusicStyleLyric/master/output/Shivers.png)
